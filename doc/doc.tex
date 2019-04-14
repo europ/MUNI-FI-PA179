@@ -1,0 +1,858 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[left=2cm,text={17cm,24cm},top=3cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{accents}
+\usepackage{comment}
+\usepackage{listings}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{amsfonts}
+\usepackage{breakurl}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{supertabular}
+\usepackage[titles]{tocloft}
+\usepackage{enumitem}
+
+\def\UrlBreaks{\do\/\do-} % URL breaking characters
+
+\newcommand{\red}[1]{\textcolor{red}{#1}} % \red{text in red}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}} % \blue{text in blue}
+\newcommand{\TODO}{\textbf{\textcolor{red}{TODO}}} % red bold TODO
+\newcommand{\tilda}{\raisebox{0.5ex}{\texttildelow}} % command \tilda for '~' character
+
+\newcounter{para}
+\newcommand\mypara{\par\refstepcounter{para}\thepara.\space}
+
+\renewcommand{\cftdot}{}
+
+\setlength\parindent{0pt} % do NOT indent
+\graphicspath{{img/}} % path to images
+
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+\begin{document}
+
+\begin{titlepage}
+
+    \begin{center}
+        % FIX: lines must end with '%', if not then it will result in an incorrect centering
+        \vfill {%
+            \Huge{%
+                \textsc{%
+                    Fakulta informatiky\\[3mm]%
+                    Masarykova univerzita%
+                }%
+            }%
+        }%
+
+        \hfill\\[15mm]
+
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[scale=3]{muni-fi-logo.pdf}
+        \end{figure}
+
+        \hfill\\[10mm]
+
+        \Huge{
+            \textbf{
+                PA179
+            }
+        }
+
+        \hfill\\[-10mm]
+
+        \huge{
+            \textbf{
+                Project Management
+            }
+        }
+
+        \hfill\\[10mm]
+
+        \LARGE{
+            \textbf{
+                Skúškové otázky
+            }
+        }
+        \vfill
+
+        \Large{
+            \today
+        }
+
+    \end{center}
+\end{titlepage}
+
+\setlength{\parskip}{0pt}
+    \hypersetup{hidelinks}\tableofcontents
+\setlength{\parskip}{0pt}
+
+\newpage
+
+
+\section{Quiz otázky}
+
+
+    \subsection{1. přednáška - Project management basics \cite{prvni}}
+
+
+        \subsubsection{Project management basics}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are the main characteristics of a project?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Temporary, Change driving, Uncertain, Unique\\[-7.5mm]
+                    \item Repetitive, Stable, Linear, Event driven\\[-7.5mm]
+                    \item Permanent, Simple, Flexible, Task driven\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are the usual dimensions of project manager’s triple constraint?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Time, Cost, Scope\\[-7.5mm]
+                    \item Risk, Quality, Procurement\\[-7.5mm]
+                    \item Plan, Change, Progress\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What is the aim of Project Portfolio?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item To add value to business\\[-7.5mm]
+                    \item To fulfil strategic goals\\[-7.5mm]
+                    \item To create a unique product\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara A process is best visualized with:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Gantt chart.\\[-7.5mm]
+                    \item Flow chart.\\[-7.5mm]
+                    \item Use case diagram.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b\\
+            \end{minipage}
+
+
+        \subsubsection{PRINCE2}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which PRINCE2 principle implies referring exceeded tolerances up next management level ?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Continued business justification\\[-7.5mm]
+                    \item Manage by stages\\[-7.5mm]
+                    \item Manage by exceptions\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which PRINCE2 theme addresses the need to identify stakeholders?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Organization\\[-7.5mm]
+                    \item Business Case\\[-7.5mm]
+                    \item Progress\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which PRINCE2 process is dedicated to creating a Project Plan?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Starting up a project\\[-7.5mm]
+                    \item Initiating a project\\[-7.5mm]
+                    \item Controlling a stage\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these is PRINCE2 suitable for?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item A project where comprehensive reporting is required\\[-7.5mm]
+                    \item A project team that requires firm control\\[-7.5mm]
+                    \item Entry-level project managers\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, c\\
+            \end{minipage}
+
+
+        \subsubsection{PMBOK}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara PMBOK’s Knowledge areas include:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Integration, Scope, Schedule, Cost\\[-7.5mm]
+                    \item Quality, Communications, Risk, Procurement\\[-7.5mm]
+                    \item Business Case, Process, Progress, Talent\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara In PMBOK, every process definition includes:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Process inputs\\[-7.5mm]
+                    \item Process tools and techniques\\[-7.5mm]
+                    \item Process outputs\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara In PMBOK, which Knowledge area is dedicated to selecting and contracting outsourced products?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Procurement\\[-7.5mm]
+                    \item Scope\\[-7.5mm]
+                    \item Communications\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara PMBOK is best used as:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item A step-by-step method to follow\\[-7.5mm]
+                    \item A handbook on different knowledge areas\\[-7.5mm]
+                    \item A guide to project manager’s competencies\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+
+        \subsubsection{ICB}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara A competence is an application of:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Knowledge, skills and abilities\\[-7.5mm]
+                    \item Wisdom, creativity and understanding\\[-7.5mm]
+                    \item Intelligence, information and experience\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara ICB’s perspective competencies include:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Quality, Change and transformation, Time\\[-7.5mm]
+                    \item Governance structures and processes, Compliance standards and regulations, Strategy\\[-7.5mm]
+                    \item Strategy, Power and interest, Culture and Values\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara ICB’s people competencies include:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Personal communication, Conflict and crisis, Resourcefulness\\[-7.5mm]
+                    \item Negotiation, Self-reflection and self-management, Teamwork\\[-7.5mm]
+                    \item Leadership, Relations and engagement, Results orientation\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What does ICB stand for?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item International Competence Baseline\\[-7.5mm]
+                    \item Individual Competence Baseline\\[-7.5mm]
+                    \item International Confidence Baseline\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+
+    \subsection{2. přednáška - Project management in IT \cite{druha}}
+
+
+        \subsubsection{Project management in IT}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are the specifics of IT projects?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Stability of resources\\[-7.5mm]
+                    \item Frequent unplanned requirements changes\\[-7.5mm]
+                    \item Increased need for risk management\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara How is the ITIL Service Strategy process useful with regards to IT project management?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item It helps us understand what service we’re creating or substantially changing\\[-7.5mm]
+                    \item It helps us determine who will run and monitor our project’s output\\[-7.5mm]
+                    \item It helps us evaluate our project’s risks\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Why is spiral lifecycle model more suitable for SW development?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item It is iterative and thus allows for changes later in the project\\[-7.5mm]
+                    \item It is straightforward and easy to implement\\[-7.5mm]
+                    \item Spiral model is not suitable for SW development\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What is typical in agile development?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Thorough upfront planning\\[-7.5mm]
+                    \item Focus on people\\[-7.5mm]
+                    \item Focus on processes\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: \TODO\\
+            \end{minipage}
+
+
+        \subsubsection{Unified Process}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are the characteristics of UP?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Risk driven\\[-7.5mm]
+                    \item Iterative and incremental\\[-7.5mm]
+                    \item Linear\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are the possible workflows of each iteration?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Business Modelling, Analysis, Requirements and Design, Implementation, Test, Deployment\\[-7.5mm]
+                    \item Business Modelling, Requirements, Implementation, Test, Deployment\\[-7.5mm]
+                    \item Inception, Elaboration, Construction, Transition\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara The Elaboration phase’s goals are:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Test operational capability\\[-7.5mm]
+                    \item Collect requirements\\[-7.5mm]
+                    \item Create baseline architecture\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b, c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which type of UML diagram is most suitable for modelling requirements?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Class diagram\\[-7.5mm]
+                    \item Activity diagram\\[-7.5mm]
+                    \item Use case diagram\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: c\\
+            \end{minipage}
+
+
+        \subsubsection{SCRUM}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What is the core responsibility of Scrum Master?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Communication\\[-7.5mm]
+                    \item Managing the SCRUM process\\[-7.5mm]
+                    \item Delivering the product\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Who is responsible for items in Product Backlog?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Product Owner\\[-7.5mm]
+                    \item Scrum Master\\[-7.5mm]
+                    \item Team of Developers\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are the characteristics of SPRINT?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item It should not be longer than one month\\[-7.5mm]
+                    \item It ends with the release of usable increment\\[-7.5mm]
+                    \item It includes development of all Product Backlog items\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What is a SCRUM?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Predictive SW development framework\\[-7.5mm]
+                    \item Process that allows early delivery of a usable product\\[-7.5mm]
+                    \item Iterative and incremental SW development framework.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b, c\\
+            \end{minipage}
+
+
+    \subsection{3. přednáška - Standards comparison and Example Project I. Part 1}
+
+
+            \subsubsection{Comparing and applying standards \cite{tretia}}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara PRINCE2 is the right choice of standard when:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Project manager needs comprehensive method to follow\\[-7.5mm]
+                    \item The company’s culture requires comprehensive reporting\\[-7.5mm]
+                    \item Bureaucratic overload is not welcome\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara SCRUM is the right choice of standard when:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item The managed team is distributed across various locations\\[-7.5mm]
+                    \item Exact requirements are not known upfront\\[-7.5mm]
+                    \item Time to market is key factor\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b, c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara IPMA is the right choice of standard when:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item The use of soft skills is crucial for the project’s success\\[-7.5mm]
+                    \item Project manager has little experience\\[-7.5mm]
+                    \item Project manager needs comprehensive method to follow\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What needs to be taken into consideration when choosing appropriate standard for the project?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Team experience, skills and collaboration\\[-7.5mm]
+                    \item Project’s domain, scale and requirements\\[-7.5mm]
+                    \item Advantages and limitations of the standard in consideration\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b, c\\
+            \end{minipage}
+
+
+            \subsubsection{Planning a project \cite{tretib}}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these are principles of agile SW development?:}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Welcome changing requirements, even late in delivery\\[-7.5mm]
+                    \item Always stick to the plan.\\[-7.5mm]
+                    \item Build projects around motivated individuals\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which approach is typical for agile project manager?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Directive\\[-7.5mm]
+                    \item Coaching\\[-7.5mm]
+                    \item Bureaucratic\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these are usually included in Project charter?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Detailed quality management plan\\[-7.5mm]
+                    \item Product description\\[-7.5mm]
+                    \item Business case\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b, c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Choose correct PDM relationship for this sequence of activities: „Testing of Component 1 cannot start until build of Component 1 has finished.“}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Start-to-start (SS)\\[-7.5mm]
+                    \item Finish-to-finish (FF)\\[-7.5mm]
+                    \item Finish-to-start (FS)\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: c\\
+            \end{minipage}
+
+
+    \subsection{4. přednáška - Example Project I. Part 1 a 2}
+
+
+        \subsubsection{Risk Management \cite{ctvrtaa}}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are common sources of risks?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item New technologies\\[-7.5mm]
+                    \item Dependencies\\[-7.5mm]
+                    \item New suppliers\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b, c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which two dimensions are estimated when assessing risks?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Duration and Quality\\[-7.5mm]
+                    \item Probability and Impact\\[-7.5mm]
+                    \item Responsibility and participation\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these are risk responses?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Reduce\\[-7.5mm]
+                    \item Transfer\\[-7.5mm]
+                    \item Run\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What do we do when transferring risks?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Shift possible impact to a third party\\[-7.5mm]
+                    \item Avoid risk completely\\[-7.5mm]
+                    \item Nothing\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b, c\\
+            \end{minipage}
+
+
+        \subsubsection{Quality Management \cite{ctvrtaa}}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What is Definition of Done?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Everything that is required for Product backlog item or Increment completion.\\[-7.5mm]
+                    \item Plan for the next Sprint.\\[-7.5mm]
+                    \item Meeting held at the beginning of Sprint.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What does a Burndown chart display?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Remaining days of project.\\[-7.5mm]
+                    \item Top 10 to-do for today.\\[-7.5mm]
+                    \item Remaining work.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Why do we count Team velocity?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item To forecast how long it will take to deliver items from Sprint or Product backlog.\\[-7.5mm]
+                    \item To better understand quality of the process.\\[-7.5mm]
+                    \item To predict customer’s satisfaction.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these are built-in SCRUM measures for managing quality?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Sprint retrospective\\[-7.5mm]
+                    \item Definition of done\\[-7.5mm]
+                    \item User stories\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b, c\\
+            \end{minipage}
+
+
+        \subsubsection{Product Backlog \cite{ctvrtaa}}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What is a user story?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item List of tasks to be done during the Sprint.\\[-7.5mm]
+                    \item Description of a system feature.\\[-7.5mm]
+                    \item A product-related report from the user.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are the advantages of adding acceptance criteria to User stories?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item They specify risks related to user story.\\[-7.5mm]
+                    \item They help define User story implementation boundaries.\\[-7.5mm]
+                    \item They serve as a baseline for functional testing.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b, c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are story points?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item A metric of potential team effort to implement a User story.\\[-7.5mm]
+                    \item Benefit points for achieving estimated financial budget.\\[-7.5mm]
+                    \item Agile tool for describing requirements.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What should be considered when prioritizing the Product backlog?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item The amount of risk removed.\\[-7.5mm]
+                    \item Value to customer.\\[-7.5mm]
+                    \item What developers had for breakfast.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+
+        \subsubsection{Sprinting \cite{ctvrtab}}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What are the main outcomes of Sprint review meeting?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Sprint Goal\\[-7.5mm]
+                    \item One process improvement\\[-7.5mm]
+                    \item Sprint Backlog\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What is a Sprint goal?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item An aggregate contribution of developing current Sprint’s user stories\\[-7.5mm]
+                    \item Total amount of team effort to fully implement a user story\\[-7.5mm]
+                    \item Clear-language description of a system feature\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these questions are answered at Daily SCRUM meeting?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item What did I do yesterday?\\[-7.5mm]
+                    \item Did I see any obstructions/ blocking issues?\\[-7.5mm]
+                    \item What did I have for breakfast?\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Why does the team hold a Sprint Review?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item To review Product Backlog\\[-7.5mm]
+                    \item To inspect Increment\\[-7.5mm]
+                    \item To inspect current Sprint’s relationships\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+
+    \subsection{5. přednáška - Example Project I. Part 3}
+
+
+        \subsubsection{Conflicts, Change and Closure \cite{pata}}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these are conflict deescalation techniques?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Make tasteless jokes\\[-7.5mm]
+                    \item Act calm\\[-7.5mm]
+                    \item Listen actively\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b, c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these could be a consequence of adding an item to Product Backlog?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Other feature will not get developed\\[-7.5mm]
+                    \item Contract will have to be changed\\[-7.5mm]
+                    \item Risk register will change\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara When is the product considered fully released?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item When all user stories from the Product Backlog have been implemented\\[-7.5mm]
+                    \item With the release of last increment\\[-7.5mm]
+                    \item At the end of last Sprint\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Why is Project Retrospective meeting being held?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item To plan for next project\\[-7.5mm]
+                    \item To learn from successes and failures\\[-7.5mm]
+                    \item To review a completed project\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b, c\\
+            \end{minipage}
+
+
+    \subsection{6. přednáška - SW solution for city information kiosks Part 1}
+
+
+        \subsubsection{Starting-up a project \cite{sesta}}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara In PRINCE2, what is a Project Brief?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item A foundation document upon which the Project Board decides to proceed.\\[-7.5mm]
+                    \item List of product requirements from the customer.\\[-7.5mm]
+                    \item Short meeting at the beginning of the project.\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these roles are a part of the Project Board?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Senior user\\[-7.5mm]
+                    \item Executive\\[-7.5mm]
+                    \item QA Engineer\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What needs to be taken into consideration when defining management approach?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Project management standards\\[-7.5mm]
+                    \item Corporate or programme strategies\\[-7.5mm]
+                    \item External dependencies and prerequisites to the project\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b, c\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What needs to be defined in the Next stage plan?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Milestones\\[-7.5mm]
+                    \item Estimated duration of activities\\[-7.5mm]
+                    \item Roles and responsibilities\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b, c\\
+            \end{minipage}
+
+
+    \subsection{7. přednáška - SW solution for city information kiosks Part 2}
+
+
+        \subsubsection{Project Initiation \cite{sedma}}
+
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What do we call the lowest level of Work Breakdown Structure?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Unimportant deliverable\\[-7.5mm]
+                    \item Work Package\\[-7.5mm]
+                    \item User story\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What is PERT?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Technique for evaluating time effort\\[-7.5mm]
+                    \item Technique for calculating critical path\\[-7.5mm]
+                    \item Product description\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara What do we need to know about an activity in order to calculate Critical path?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Start and end points\\[-7.5mm]
+                    \item Dependencies\\[-7.5mm]
+                    \item Responsibility\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, b\\
+            \end{minipage}
+
+            \begin{minipage}{\textwidth}
+                \textbf{ \mypara Which of these do we include in End stage report?}\\[-7.5mm]
+                \begin{enumerate}[label={(\alph*)}]
+                    \item Review of team performance\\[-7.5mm]
+                    \item Detailed plan for next stage\\[-7.5mm]
+                    \item Summary of current issues and risks\\[-6mm]
+                \end{enumerate}
+                \textit{\textbf{Správně}}: a, c\\
+            \end{minipage}
+
+\section{Fulltext otázky}
+
+    \begin{minipage}{\textwidth}
+        \textbf{ \mypara Vysvětlete projekt, program, portfolio.}\\
+        \TODO\\
+     \end{minipage}
+
+     \begin{minipage}{\textwidth}
+        \textbf{ \mypara Uveďte 2 rozdílné a 3 shodné prvky ICB a Prince2 certifikací.}\\
+        \TODO\\
+     \end{minipage}
+
+\newpage
+
+\section{Literatura}
+
+    \bibliographystyle{czechiso}
+    \begin{flushleft}
+        \bibliography{quotation}
+    \end{flushleft}
+
+
+\end{document}
